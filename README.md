@@ -1,49 +1,16 @@
-# Kenyan Political Analyst Project
+# React + Vite
 
-A monorepo for political discourse insight & monitoring.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Structure
+Currently, two official plugins are available:
 
-- **frontend/** - React & TypeScript dashboard app (UI, filtering, charts, auth)
-- **backend/** - Express/TypeScript API server (data feeds, proxy, business logic)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Local Development
+## React Compiler
 
-**Start Backend**
-```bash
-cd backend
-npm install
-npm start
-```
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-**Start Frontend**
-```bash
-cd frontend
-npm install
-npm start
-```
+## Expanding the ESLint configuration
 
-Frontend expects backend API running on localhost:4000.  
-Modify API URLs in `src/services/dataApi.ts` for deployment needs.
-
-## .env Usage
-- Place API keys/secrets here (**DO NOT** commit secrets to GitHub).
-
-**Example:**
-```
-REACT_APP_FIREBASE_API_KEY=your_frontend_firebase_key
-TWITTER_API_KEY=your_backend_twitter_key
-NEWS_API_KEY=your_backend_newsapi_key
-PORT=4000
-```
-
-## Next Steps
-
-- Implement backend integrations (Twitter/X, news, database).
-- Build out frontend with components from upgrade PRs.
-- Configure Firebase for authentication.
-- Deploy both parts separately for production.
-
----
-
-**For questions, see repository issues or contact project maintainers.**
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
